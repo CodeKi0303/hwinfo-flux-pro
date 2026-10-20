@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "registry": { "hive": "current_user", "product": "hwinfo64" },
+  "cpu": { "sensor": "CPU [#0]: Example CPU", "label": "CPU Package" },
+  "gpu": { "sensor": "GPU [#0]: Example GPU", "label": "GPU Temperature" },
+  "interval_ms": 2000,
+  "display_interval_ms": 1000,
+  "device_path": null
+}
