@@ -33,10 +33,13 @@ Packaging produces a versioned standalone `.exe`, a ZIP,
 `THIRD-PARTY-NOTICES.txt`, `RUST-THIRD-PARTY-NOTICES.html`, and `BUILD-INFO.txt`.
 It also includes exactly three README screenshots under `docs/images/`:
 `flux-pro-settings.png`, `hwinfo-gadget-cpu.png`, and `hwinfo-gadget-gpu.png`.
-The same explicit image list drives copying, ZIP entries, and `SHA256SUMS` so
-relative README links work after extraction. No other `docs/` contents are copied.
-The ZIP has ten file entries; `SHA256SUMS` covers eleven standalone package files,
-including the ZIP and all three images.
+The same explicit image list drives copying and ZIP entries so relative README
+links work after extraction. No other `docs/` contents are copied. The ZIP has
+ten file entries. `SHA256SUMS` covers only the standalone EXE and ZIP.
+Publish exactly three release attachments: the EXE, ZIP, and `SHA256SUMS`.
+Documentation, license notices, screenshots, configuration examples, and build
+information belong inside the ZIP rather than as separate release attachments.
+The internal CI artifact retains the complete package directory for review.
 Prefer distributing the ZIP so the instructions and license notices travel with
 the executable. Redistributing the standalone EXE also requires accompanying
 license notices. HWiNFO is a separate prerequisite and is never bundled.

@@ -7,10 +7,12 @@ HWiNFO의 CPU·GPU 온도를 Antec FLUX PRO 케이스 표시부에 보내는 Win
 
 ## 다운로드
 
-**[v0.2.0 Windows x64 EXE 다운로드](https://github.com/CodeKi0303/hwinfo-flux-pro/releases/download/v0.2.0/hwinfo-flux-pro-0.2.0-x86_64-pc-windows-msvc.exe)**
+**[v0.2.0 Windows x64 ZIP 다운로드 — 권장](https://github.com/CodeKi0303/hwinfo-flux-pro/releases/download/v0.2.0/hwinfo-flux-pro-0.2.0-x86_64-pc-windows-msvc.zip)**
 
-[ZIP 다운로드 — 설명서·라이선스 포함](https://github.com/CodeKi0303/hwinfo-flux-pro/releases/download/v0.2.0/hwinfo-flux-pro-0.2.0-x86_64-pc-windows-msvc.zip)
+[EXE만 다운로드](https://github.com/CodeKi0303/hwinfo-flux-pro/releases/download/v0.2.0/hwinfo-flux-pro-0.2.0-x86_64-pc-windows-msvc.exe)
 · [릴리즈 안내 및 체크섬](https://github.com/CodeKi0303/hwinfo-flux-pro/releases/tag/v0.2.0)
+
+ZIP에는 실행 파일, 설명서, 설정 예제와 라이선스 고지가 함께 들어 있습니다.
 
 ## 사용하기
 

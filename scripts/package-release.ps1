@@ -93,7 +93,7 @@ try {
     } finally {
         try { if ($null -ne $archive) { $archive.Dispose() } } finally { $zipStream.Dispose() }
     }
-    $assetNames = @($exeName, "$stem.zip", 'BUILD-INFO.txt', 'LICENSE', 'README.md', 'config.example.json', 'THIRD-PARTY-NOTICES.txt', 'RUST-THIRD-PARTY-NOTICES.html') + $readmeImages
+    $assetNames = @($exeName, "$stem.zip")
     $hashes = foreach ($name in ($assetNames | Sort-Object)) {
         $digest = (Get-FileHash -LiteralPath (Join-Path $staging $name) -Algorithm SHA256).Hash.ToLowerInvariant()
         "$digest  $name"

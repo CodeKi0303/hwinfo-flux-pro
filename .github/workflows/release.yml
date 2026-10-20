@@ -64,9 +64,14 @@ jobs:
           GH_REPO: ${{ github.repository }}
           RELEASE_TAG: ${{ github.ref_name }}
         run: |
-          mapfile -d '' assets < <(find dist -type f -print0)
-          if [ "${#assets[@]}" -eq 0 ]; then
-            echo 'No completed release assets were downloaded.' >&2
-            exit 1
-          fi
+          stem="hwinfo-flux-pro-${RELEASE_TAG#v}-x86_64-pc-windows-msvc"
+          package="dist/$stem"
+          assets=("$package/$stem.exe" "$package/$stem.zip" "$package/SHA256SUMS")
+          for asset in "${assets[@]}"; do
+            if [ ! -s "$asset" ]; then
+              echo "Missing release asset: $asset" >&2
+              exit 1
+            fi
+          done
+          (cd "$package" && sha256sum --check --strict SHA256SUMS)
           gh release create "$RELEASE_TAG" "${assets[@]}" --verify-tag --draft --title "$RELEASE_TAG" --generate-notes
