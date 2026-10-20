@@ -5,17 +5,24 @@ HWiNFO의 CPU·GPU 온도를 Antec FLUX PRO 케이스 표시부에 보내는 Win
 
 ![FLUX PRO의 센서 선택, 표시·스캔 주기 및 자동 시작 설정 화면](docs/images/flux-pro-settings.png)
 
+## 다운로드
+
+**[v0.2.0 Windows x64 EXE 다운로드](https://github.com/CodeKi0303/hwinfo-flux-pro/releases/download/v0.2.0/hwinfo-flux-pro-0.2.0-x86_64-pc-windows-msvc.exe)**
+
+[ZIP 다운로드 — 설명서·라이선스 포함](https://github.com/CodeKi0303/hwinfo-flux-pro/releases/download/v0.2.0/hwinfo-flux-pro-0.2.0-x86_64-pc-windows-msvc.zip)
+· [릴리즈 안내 및 체크섬](https://github.com/CodeKi0303/hwinfo-flux-pro/releases/tag/v0.2.0)
+
 ## 사용하기
 
 필요한 환경: **Windows x64**, **Antec FLUX PRO**, **HWiNFO의 Gadget 출력**.
 HWiNFO는 별도로 설치하며, 이 프로그램과 함께 센서 모드로 실행해 두세요.
 iUnity 등 표시부를 제어하는 다른 프로그램은 종료합니다.
 
-1. 배포 ZIP을 원하는 폴더에 풉니다.
+1. 위 링크에서 EXE를 원하는 폴더에 저장합니다. ZIP을 받았다면 압축을 풉니다.
 2. HWiNFO의 **센서 설정 → HWiNFO Gadget**에서
    **가젯에 보고 활성화(Enable reporting to Gadget)**를 켭니다. 사용할 CPU·GPU
    온도 항목을 각각 선택해 **가젯의 보고서 값(Report value in Gadget)**도 켭니다.
-3. `hwinfo-flux-pro.exe`를 실행합니다.
+3. 다운로드한 EXE를 실행합니다. ZIP에는 `hwinfo-flux-pro.exe`로 들어 있습니다.
 4. **HWiNFO 내보내기 위치**, **CPU 표시부**, **GPU 표시부**를 선택하고
    **적용**을 누릅니다. 처음 설정한 뒤에는 트레이 메뉴에서 **표시 시작**을
    선택합니다. 이미 표시 중이면 변경 내용이 자동 반영됩니다.
