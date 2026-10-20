@@ -7,10 +7,10 @@ HWiNFO의 CPU·GPU 온도를 Antec FLUX PRO 케이스 표시부에 보내는 Win
 
 ## 다운로드
 
-**[v0.2.0 Windows x64 ZIP 다운로드 — 권장](https://github.com/CodeKi0303/hwinfo-flux-pro/releases/download/v0.2.0/hwinfo-flux-pro-0.2.0-x86_64-pc-windows-msvc.zip)**
+**[최신 릴리즈 보기](https://github.com/CodeKi0303/hwinfo-flux-pro/releases/latest)**
 
-[EXE만 다운로드](https://github.com/CodeKi0303/hwinfo-flux-pro/releases/download/v0.2.0/hwinfo-flux-pro-0.2.0-x86_64-pc-windows-msvc.exe)
-· [릴리즈 안내 및 체크섬](https://github.com/CodeKi0303/hwinfo-flux-pro/releases/tag/v0.2.0)
+릴리즈 안내를 확인한 뒤 **Assets**에서 Windows x64용 `.exe` 파일을 받으세요.
+파일 검증용 `SHA256SUMS`도 같은 목록에 있습니다.
 
 ZIP에는 실행 파일, 설명서, 설정 예제와 라이선스 고지가 함께 들어 있습니다.
 
@@ -20,7 +20,7 @@ ZIP에는 실행 파일, 설명서, 설정 예제와 라이선스 고지가 함�
 HWiNFO는 별도로 설치하며, 이 프로그램과 함께 센서 모드로 실행해 두세요.
 iUnity 등 표시부를 제어하는 다른 프로그램은 종료합니다.
 
-1. 위 링크에서 EXE를 원하는 폴더에 저장합니다. ZIP을 받았다면 압축을 풉니다.
+1. 최신 릴리즈의 **Assets**에서 받은 EXE를 원하는 폴더에 저장합니다. ZIP을 받았다면 압축을 풉니다.
 2. HWiNFO의 **센서 설정 → HWiNFO Gadget**에서
    **가젯에 보고 활성화(Enable reporting to Gadget)**를 켭니다. 사용할 CPU·GPU
    온도 항목을 각각 선택해 **가젯의 보고서 값(Report value in Gadget)**도 켭니다.
