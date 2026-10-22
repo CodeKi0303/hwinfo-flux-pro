@@ -41,10 +41,8 @@ impl From<Result<f64, String>> for Temperature {
                 Self {
                     celsius: Some(v),
                     display_celsius,
-                    error: (!display_celsius.is_available()).then(|| {
-                        "This reading is unavailable on the display after whole-degree conversion."
-                            .into()
-                    }),
+                    error: (!display_celsius.is_available())
+                        .then(|| "Readings below 1°C cannot be shown on the display.".into()),
                 }
             }
             Ok(_) => Self {
@@ -877,19 +875,19 @@ mod tests {
             measurement_freshness: "unknown",
         };
         assert!(sample.valid());
-        assert_eq!(&sample.report()[6..12], &[9, 9, 0, 4, 2, 0]);
+        assert_eq!(&sample.report()[6..12], &[9, 9, 0, 4, 2, 6]);
         let json = serde_json::to_value(&sample).unwrap();
         assert_eq!(json["cpu"]["celsius"], 100.4);
-        assert_eq!(json["cpu"]["display_celsius"], 99);
+        assert_eq!(json["cpu"]["display_celsius"], 99.0);
         assert_eq!(json["gpu"]["celsius"], 42.59);
-        assert_eq!(json["gpu"]["display_celsius"], 42);
+        assert_eq!(json["gpu"]["display_celsius"], 42.6);
         for missing in [Ok(0.0), Ok(-2.0), Ok(0.5), Err("sensor missing".into())] {
             let sample = Sample {
                 cpu: missing.into(),
                 ..sample.clone()
             };
             assert!(!sample.valid());
-            assert_eq!(&sample.report()[6..12], &[0xee, 0xee, 0xee, 4, 2, 0]);
+            assert_eq!(&sample.report()[6..12], &[0xee, 0xee, 0xee, 4, 2, 6]);
         }
     }
 }
